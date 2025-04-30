@@ -1,4 +1,5 @@
-// Handle form validation
+// Form validation and event listener for Nail Salon website
+
 document
   .getElementById("appointmentForm")
   .addEventListener("submit", function (e) {
@@ -15,12 +16,11 @@ document
     document.getElementById("successMessage").textContent = "";
 
     if (name === "") {
-      document.getElementById("nameError").textContent =
-        "Please enter your name.";
+      document.getElementById("nameError").textContent = "Name is required.";
       valid = false;
     }
 
-    const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       document.getElementById("emailError").textContent =
         "Please enter a valid email.";
@@ -35,12 +35,13 @@ document
 
     if (valid) {
       document.getElementById("successMessage").textContent =
-        "Thank you! Your appointment has been booked.";
+        "Appointment booked successfully!";
       document.getElementById("appointmentForm").reset();
     }
   });
 
-// Toggle theme
+// Interactive element: toggle theme color
+
 document.getElementById("toggleTheme").addEventListener("click", function () {
   const container = document.querySelector(".container");
   container.classList.toggle("alt-theme");
