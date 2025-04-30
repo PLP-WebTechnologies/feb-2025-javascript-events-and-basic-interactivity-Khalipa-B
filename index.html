@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Nails Salon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Glow Nails Salon</h1>
+    <h2>Book an Appointment</h2>
+    
+    <form id="appointmentForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <div class="error" id="nameError"></div>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" />
+      <div class="error" id="emailError"></div>
+
+      <label for="service">Service:</label>
+      <select id="service" name="service">
+        <option value="">-- Select a Service --</option>
+        <option value="manicure">Manicure</option>
+        <option value="pedicure">Pedicure</option>
+        <option value="gel">Gel Nails</option>
+        <option value="acrylic">Acrylic Nails</option>
+      </select>
+      <div class="error" id="serviceError"></div>
+
+      <button type="submit" class="interactive-button">Book Now</button>
+    </form>
+
+    <div id="successMessage" class="success"></div>
+
+    <button class="interactive-button
